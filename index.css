@@ -1,0 +1,53 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+    50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+.marker {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  display: block;
+}
+.pin {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  background: rgba(5, 124, 255, 1);
+  border: 4px solid #FFF;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.pin-effect {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  display: block;
+  background: rgba(5, 124, 255, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulsate 1s ease-out infinite;
+}
